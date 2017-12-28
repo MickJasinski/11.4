@@ -1,6 +1,5 @@
-var startButton = document.getElementById('Start');
-var launchProgram = giveInfo();
-startButton.addEventListener('click', launchProgram);
+var startButton = document.getElementById('start');
+startButton.addEventListener('click', giveInfo);
 
 
 function Phone(brand, model, price, color) {
@@ -10,13 +9,6 @@ function Phone(brand, model, price, color) {
 	this.color = color;
 }
 
-Phone.prototype.printInfo = function() {
-	console.log(this.model + " by " + this.brand + " in " + this.color + ". Now only: $" + this.price + "!");
-}
-
-Phone.prototype.displayInfo = function() {
-	alert(this.model + " by " + this.brand + " in " + this.color + ". Now only: $" + this.price + "!");
-}
 
 function giveInfo() {
 	var entry = prompt("Enter model of your choice (iPhone 6S, Galaxy S6, OnePlus)");
@@ -36,3 +28,10 @@ var GalaxyS6 = new Phone("Samsung", "Galaxy S6", 199, "white");
 var iPhone6S = new Phone("Apple", "iPhone 6s", 250, "space gray");
 var OnePlus = new Phone("One", "OnePlus", 129, "black");
 
+Phone.prototype.printInfo = function() {
+	console.log(this.model + " by " + this.brand + " in " + this.color + ". Now only: $" + this.price + "!");
+}
+
+Phone.prototype.displayInfo = function() {
+	alert(this.model + " by " + this.brand + " in " + this.color + ". Now only: $" + this.price + "!");
+}
