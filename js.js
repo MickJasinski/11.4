@@ -8,8 +8,8 @@ function Phone(brand, model, price, color) {
     this.model = model;
     this.price = price;
     this.color = color;
-    this.applyDiscount(cutValue) {
-        return self.price - cutValue;
+    this.applyDiscount = function(cutValue) {
+        self.price -= cutValue;
     }
 }
 
